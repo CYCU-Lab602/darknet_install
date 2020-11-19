@@ -1,4 +1,4 @@
-with open('Makefile') as f:
+with open('darknet/Makefile') as f:
     lines = f.readlines()
 
 for index, line in enumerate(lines):
@@ -18,5 +18,5 @@ for index, line in enumerate(lines):
         lines.pop(index)
         lines.insert(index, 'LIBSO=1\n')
 
-with open('Makefile', 'w') as f:
+with open('darknet/Makefile', 'w') as f:
     f.writelines(lines)

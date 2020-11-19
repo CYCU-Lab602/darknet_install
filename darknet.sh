@@ -4,16 +4,16 @@
 # install darknet with bash
 # by Lee Hao
 
-# work on ubuntu 16.04
-#	   cuda 10.0
-#	   cudnn 7.5
+# test on ubuntu 16.04
+#         cuda 10.0
+#         cudnn 7.5
+#         opencv 3.4.7
 
 # Download darknet
 git clone https://github.com/AlexeyAB/darknet.git
 
+# set Makefile value
 python changeMakefile.py
 
-cd darknet
-
-make
-
+# make darknet
+cd darknet && make -j$(nproc)
